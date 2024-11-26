@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="./assets/scripts/script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">Кого или что будем искать?</h1>
+      <form id="searchForm" name="search__form">
+        <div class="search__box">
+          <select
+            name="change"
+            id="changeSelectOption"
+            class="search__box_select"
+          >
+            <option value="planets">Планеты</option>
+            <option value="people">Люди</option>
+            <option value="films">Фильмы</option>
+          </select>
+          <input
+            type="number"
+            name="index"
+            id="searchIndex"
+            class="search__box_input"
+            placeholder="Введите номер"
+          />
+
+          <button class="search__box_btn" id="searchBtn" type="submit">
+            Получить ответ
+          </button>
+        </div>
+      </form>
+      <div id="loadingMessage" class="loader hidden">Идёт загрузка...</div>
+      <div class="search__result">
+        <p class="search__result_finally" id="finallyRequest"></p>
+        <p class="search__result_success" id="successRequest"></p>
+        <p class="search__result_invalid" id="invalidRequest"></p>
+      </div>
+    </main>
+  </body>
+</html>
